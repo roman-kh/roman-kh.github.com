@@ -1,21 +1,52 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title:            Roman Kh blog
+description:      
+disqus_shortname: 
+# When testing locally leave blank or use http://localhost:4000
+url:              //roman-kh.github.io
 
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+# Owner/author information
+owner:
+  name:           Roman Kh
+  avatar:         
+  bio:            "My bio"
+  email:          roman@libertygrant.co.uk
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       rhudor
+  github:         roman-kh
+  stackexchange:  
+  linkedin:       rhudor
+  #instagram:      
+  #flickr:         
+  tumblr:         roman-kh
+  # google plus id, include the '+', eg +mmistakes
+  #google_plus:    +rhudor
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/Moscow
+future:      true
+pygments:    true
+
+# Amount of posts to show on home page
+paginate: 10
 
 # Build settings
 markdown: kramdown
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
