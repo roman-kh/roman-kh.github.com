@@ -8,21 +8,19 @@ url: //roman-kh.github.io
 
 # Owner/author information
 owner:
-  name:           Roman Kh
+  name:            Roman Kh
   avatar:  
-  bio:            "Did something..."
-  email:          roman@libertygrant.co.uk
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:   rhudor     
-  facebook:  rhudor
-  github:  roman-kh
+  bio:             "Did something..."
+  email:           roman@libertygrant.co.uk
+  twitter:         rhudor     
+  facebook:        rhudor
+  github:          roman-kh
   stackexchange:   http://stackoverflow.com/users/2370124
-  linkedin:   rhudo
+  linkedin:        rhudo
   instagram:    
   flickr:         
-  tumblr:     roman-kh    
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
+  tumblr:          roman-kh    
+  google_plus:     105902469420566504130
 
 # Background image to be tiled on all pages
 background: 
