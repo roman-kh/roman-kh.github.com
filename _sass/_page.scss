@@ -20,6 +20,7 @@ body {
 	p > a,
 	li > a {
 		background-color: darken($body-color, 8);
+		padding: 0 3px;
 		border-bottom: 1px dotted lighten($link-color, 50);
 		&:hover {
 			border-bottom-style: solid;
