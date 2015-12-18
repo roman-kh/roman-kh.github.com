@@ -10,7 +10,7 @@ and hosted on Github Pages.
 This is a simple how-to procedure:
 
 # Prerequisites
-You need to have Ruby, Ruby Development Kit and Python already installed on your computer
+You need to have Ruby, Ruby Development Kit and Python already installed on your computer.
 
 # Create a local Jekyll installation
 * Install [Jekyll](https://jekyllrb.com/) and a few useful gems
@@ -21,7 +21,7 @@ gem install jekyll-paginate
 gem install jekyll-gist
 gem install pygments.rb
 {% endhighlight %}
-Note that *pygments.rb* requires python's *pygment* package, so you might need install it in the first place
+Note that *pygments.rb* requires python's *[pygment](http://pygments.org)* package, so you might need install it in the first place:
 {% highlight sh %}
 pip install pygments
 {% endhighlight %}
@@ -50,7 +50,7 @@ Use [control panel](http://www.microsoft.com/resources/documentation/windows/xp/
 {% highlight sh %}
 jekyll serve
 {% endhighlight %}
-This will run a web server and you may visit [http://localhost:4000] to check if everything is OK.
+This will run a web server and you may visit [http://localhost:4000](http://localhost:4000) to check if everything is OK.
 
 # Create a Github Pages site
 * In your Github account create a repo for your Github Pages site. It must have a name *your-account-name*.github.com
