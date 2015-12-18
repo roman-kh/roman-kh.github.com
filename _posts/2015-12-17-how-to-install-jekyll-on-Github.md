@@ -50,8 +50,9 @@ This will run a web server and you may visit http://localhost:4000
 # Create a Github Pages site
 * In your Github account create a repo for your Github Pages site. It must have a name *your-account-name*.github.com
 
-* Connect your local repo and your Github repo
+* Connect your local repo to your Github repo
 {% highlight sh %}
+git remote rm origin
 git remote add origin https://github.com/YOU/YOU.github.com.git
 {% endhighlight %}
 Instead of *YOU* use your account name.
