@@ -163,6 +163,7 @@ body {
 	text-transform: uppercase;
 	color: lighten($base-color,60);
 	a {
+		background-color: $body-color;
 		color: lighten($base-color,60);
 	}
 	.vcard {
