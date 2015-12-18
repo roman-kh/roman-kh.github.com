@@ -164,7 +164,7 @@ body {
 	text-transform: uppercase;
 	color: lighten($base-color,60);
 	li>a, a {
-		background-color: parent;
+		background-color: inherit;
 		color: lighten($base-color,60);
 	}
 	.vcard {
