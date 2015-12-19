@@ -7,7 +7,7 @@ modified: 2015-12-19
 
 Almost everybody now uses *numpy* as it is extremely helpful for data analysis.
 However, oftentimes (if not almost always) numpy does not deliver at its full strength since it is installed in a very inefficient way - 
-when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core even when your computer is equipped with multicore processor or even a few processors.
+when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core even when your computer is equipped with a multicore processor or even a few processors.
 
 You might easily check if it is the case for you. To do this just create a simple test program:
 {% highlight python %}
