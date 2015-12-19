@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to make numpy work on several CPUs
+title: How to make numpy use several CPUs
 description: "Make your numpy faster"
 modified: 2015-12-19
 ---
 
 Almost everybody now uses *numpy* as it is extremely helpful for data analysis.
 However, oftentimes (if not almost always) numpy does not deliver at its full strength since it is installed in a very inefficient way - 
-when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core.
+when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core even when your computer is equipped with multicore processor or even a few processors.
 
 You might easily check if it is the case for you. To do this just create a simple test program:
 {% highlight python %}
@@ -28,9 +28,9 @@ Afterwards run *top* to check the performance of your computer:
 top
 {% endhighlight %}
 You will see a *python* process at the very top of your process list.
-Pay attention to *%CPU* column of that process: a value around 100 means that it is actually using only 1 CPU core.
+Now pay attention to the *%CPU* column of that process: a value around 100 means that it is actually using only 1 CPU core.
 
-If this is the case, you might want to significantly improve numpy performance. And, fortunately. this is very easy.
+If this is the case, you might want to significantly improve numpy's performance. Fortunately. this is very easy.
 
 
 # Install OpenBLAS library
