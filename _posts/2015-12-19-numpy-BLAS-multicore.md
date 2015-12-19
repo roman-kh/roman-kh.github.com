@@ -3,6 +3,8 @@ layout: post
 title: How to make numpy use several CPUs
 description: "Make your numpy faster"
 modified: 2015-12-19
+image:
+  feature: abstract-10.jpg
 ---
 
 Almost everybody now uses *numpy* as it is extremely helpful for data analysis.
@@ -68,18 +70,7 @@ First of all, get rid of the wrong numpy you already have
 pip uninstall numpy
 {% endhighlight %}
 
-Then download numpy sources
-{% highlight sh %}
-pip install -d . numpy
-{% endhighlight %}
-This will create in the current directory a file with a name like *numpy-1.10.2.tar.gz*. 
-Unzip it and enter the source directory.
-{% highlight sh %}
-tar xzf numpy-1.10.2.tar.gz
-cd numpy-1.10.2
-{% endhighlight %}
-
-Create here a file *site.cfg* with the following content
+Then create a file *.numpy-site.cfg* in your home directory with the following content:
 {% highlight sh %}
 [default]
 include_dirs = /opt/OpenBLAS/include
@@ -99,11 +90,31 @@ libraries = openblas
 {% endhighlight %}
 If you have chosen a different location for your OpenBLAS installation, edit the paths accordingly.
 
-Now build and install numpy
+And install numpy again
+{% highlight sh %}
+pip install numpy
+{% endhighlight %}
+If there were no errors during compilation and installation and everything went just fine, 
+run the test again to make sure that all CPU cores are now being used.
+
+If you prefer a manual compilation/installation, like I often do, you may try the following approach.
+First, download numpy sources.
+{% highlight sh %}
+pip install -d . numpy
+{% endhighlight %}
+This will create in the current directory a file named like *numpy-1.10.2.tar.gz* (the version will definitely change in future). 
+Unzip it and enter the source directory.
+{% highlight sh %}
+tar xzf numpy-1.10.2.tar.gz
+cd numpy-1.10.2
+{% endhighlight %}
+
+Now create *site.cfg* file (notice that the name is a bit different here) with the very same content as *.numpy-site.cfg* above.
+
+And finally build and install numpy
 {% highlight sh %}
 python setup.py build
 python setup.py install
 {% endhighlight %}
 
-If there were no errors during compilation and installation and everything went just fine, 
-run the test again to make sure that all CPU cores are now being used.
+

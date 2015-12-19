@@ -3,6 +3,8 @@ layout: post
 title: How to setup a Jekyll blog on Github Pages
 description: "The start"
 modified: 2015-12-17
+image:
+  feature: abstract-7.jpg
 ---
 
 Today, *17 Dec 2015*, I have created this blog. It is powered by [Jekyll](https://jekyllrb.com/) with [Hpstr theme](https://github.com/mmistakes/hpstr-jekyll-theme)

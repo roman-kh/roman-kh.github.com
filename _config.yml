@@ -9,7 +9,7 @@ url: //roman-kh.github.io
 # Owner/author information
 owner:
   name:            Roman Kh
-  avatar:  
+  avatar:          avatar.jpg
   bio:             "Did something..."
   email:           roman@libertygrant.co.uk
   twitter:         rhudor     
@@ -42,7 +42,7 @@ gems:
   - jekyll-gist
 sass:
   sass_dir: _sass
-  style: compressed
+  style: :compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/

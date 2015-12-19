@@ -12,6 +12,13 @@ body {
 	@include clearfix;
 	h1, h2, h3, h4, h5, h6, p, li {
 		word-wrap: break-word;
+	}	
+	header {
+		.entry-title {
+			a, a:visited {
+				color: #349;
+			}
+		}
 	}
 }
 .entry-content {
@@ -27,6 +34,7 @@ body {
 		}
 	}
 }
+
 
 // Entry Header
 // --------------------------------------------------
