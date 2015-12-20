@@ -165,3 +165,4 @@ And finally build and install numpy
 python setup.py build
 sudo python setup.py install
 {% endhighlight %}
+Now you can run the test to see how fast your numpy is.
