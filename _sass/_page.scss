@@ -12,6 +12,9 @@ body {
 	@include clearfix;
 	h1, h2, h3, h4, h5, h6, p, li {
 		word-wrap: break-word;
+	}
+	h1 {
+		margin: 0.8em 0 -0.3em 0;
 	}	
 	header.index {
 		.entry-title {
@@ -34,6 +37,9 @@ body {
 		&:hover {
 			border-bottom-style: solid;
 		}
+	}
+	p + .highlight {
+		margin-top: -1em;
 	}
 }
 
