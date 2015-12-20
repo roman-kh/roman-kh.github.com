@@ -2,6 +2,7 @@
 layout: post
 title: How to setup a Jekyll blog on Github Pages
 description: "The start"
+tags: [Jekyll, Github Pages]
 modified: 2015-12-17
 image:
   feature: abstract-7.jpg
