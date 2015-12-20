@@ -3,7 +3,7 @@ layout: post
 title: How to make numpy use several CPUs
 description: "Make your numpy faster"
 tags: [python, numpy, BLAS, linux, multicore]
-modified: 2015-12-19
+date: 2015-12-19
 image:
   feature: abstract-10.jpg
 ---
