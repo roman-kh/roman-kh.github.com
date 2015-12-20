@@ -10,9 +10,13 @@ image:
 
 Almost everybody now uses *numpy* as it is extremely helpful for data analysis.
 However, oftentimes (if not almost always) numpy does not deliver at its full strength since it is installed in a very inefficient way - 
-when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core even when your computer is equipped with a multicore processor or even a few processors.
+when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core even when your computer is equipped with a 
+multicore processor or even a few processors.
 
-You might easily check if it is the case for you. To do this just create a simple test program:
+*This post is intended for Linux users only. Those from Windows world might need additiondal googling. 
+The other option is to switch to scientific Python bundles like Anaconda (my choice), Canopy or some other.*
+
+You might easily check if you are affected by the single core numpy problem. To do this just create a simple test program:
 {% highlight python %}
 import numpy as np
 size = 10000
