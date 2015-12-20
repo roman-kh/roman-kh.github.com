@@ -44,6 +44,7 @@ There are two quite different situations:
 
 - you have some ATLAS/BLAS libraries already installed
 - you don't have any libraries yet
+
 To find out what you have check if your numpy is linked to BLAS
 {% highlight sh %}
 cd /usr/local/lib/python2.7/dist-packages/numpy/core
