@@ -13,7 +13,8 @@ However, oftentimes (if not almost always) numpy does not deliver at its full st
 when it is linked with old-fashioned ATLAS and BLAS libraries which can use only 1 CPU core even when your computer is equipped with a 
 multicore processor or even a few processors.
 
-*This post is intended for Linux users only. Those from Windows world might need additiondal googling. 
+*This post is intended for Linux users only. All the shell commands below are for Ubuntu, but you will easily find analogues for your distribution. 
+Those from Windows world might need additiondal googling. 
 The other option is to switch to scientific Python bundles like Anaconda (my choice), Canopy or some other.*
 
 You might easily check if you are affected by the single core numpy problem. To do this just create a simple test program:
@@ -30,22 +31,22 @@ And run it as a background process
 python test.py &
 {% endhighlight %}
 
-Afterwards run *top* to check the performance of your computer:
+Afterwards, run *top* to check the performance:
 {% highlight sh %}
 top
 {% endhighlight %}
 You will see a *python* process at the very top of your process list.
 Now pay attention to the *%CPU* column of that process: a value around 100 means that it is actually using only 1 CPU core.
 
-If this is the case, you might want to significantly improve numpy's performance. Fortunately. this is very easy.
+If this is the case, you might want to significantly improve numpy's performance. Fortunately. this is pretty easy.
 
 # Check libraries
 There are two quite different situations:
 
-- you have some ATLAS/BLAS libraries already installed
-- you don't have any libraries yet
+- you have some ATLAS/BLAS libraries installed already;
+- you don't have any libraries yet.
 
-To find out what you have check if your numpy is linked to BLAS
+To find out what you have, check whether your numpy is linked to BLAS
 {% highlight sh %}
 cd /usr/local/lib/python2.7/dist-packages/numpy/core
 ldd multiarray.so
@@ -112,7 +113,7 @@ Now run the test again and make sure that all CPU cores are now being used.
 This is all you have to do. Now enjoy the full speed numpy.
 
 # Build the *right* numpy
-Those who did not have any BLAS libraries have to reinstall numpy.
+Those who did not have any BLAS libraries are left with nothing to do but reinstall numpy.
 
 First of all, get rid of the wrong numpy you already have.
 {% highlight sh %}
