@@ -31,6 +31,7 @@ num_classes = train_Y.shape[1]
 # shape [None, num_features] suggests that we don't limit the number of instances in the model
 # while the number of features is known in advance
 X = tf.placeholder("float", [None, num_features])
+# same with labels: number of classes is known, while number of instances is left undefined
 Y = tf.placeholder("float",[None, num_classes])
 
 # W - weights array
@@ -40,8 +41,8 @@ B = tf.Variable(tf.zeros([num_classes]))
 
 # Define a model
 # a simple linear model y=wx+b wrapped into softmax
-pY = tf.nn.softmax(tf.matmul(W, X) + B)
-# pY will contain prediction the model makes, while Y contains a real data
+pY = tf.nn.softmax(tf.matmul(X, W) + B)
+# pY will contain predictions the model makes, while Y contains real data
 
 # Define a cost function
 cost_fn = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(pY, Y))
