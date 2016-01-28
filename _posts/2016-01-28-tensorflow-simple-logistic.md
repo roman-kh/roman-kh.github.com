@@ -69,7 +69,7 @@ for i in range(num_epochs):
 # Now assess the model
 # create a variable which reflects how good your predictions are
 # here we just compare if the predicted label and the real label are the same
-accuracy = tf.reduce_mean(tf.cast(tf.equal(tf.argmin(pY,1), tf.argmax(Y,1)), "float"))
+accuracy = tf.reduce_mean(tf.cast(tf.equal(tf.argmax(pY,1), tf.argmax(Y,1)), "float"))
 # and finally, run calculations with all test data
 accuracy_value = sess.run(accuracy, feed_dict={X:test_X, Y:test_Y})
 {% endhighlight %}
