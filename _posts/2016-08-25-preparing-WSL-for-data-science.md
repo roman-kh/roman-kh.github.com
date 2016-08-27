@@ -6,6 +6,7 @@ tags: [WSL, linux]
 date: 2016-08-25
 image:
   feature: abstract-11.jpg
+comments: true
 ---
 
 I do a lot of data science stuff: reading and writing large data files, running some complicated  and resource-consuming software (like Apache Spark), programming in several languages simultaneously (R, Python, JavaScript, Scala), quick prototyping in Jupyter notebooks. Some libraries I use do not work on Windows, so I need Linux as well.

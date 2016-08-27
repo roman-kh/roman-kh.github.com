@@ -6,6 +6,7 @@ tags: [python, numpy, BLAS, linux, multicore]
 date: 2015-12-19
 image:
   feature: abstract-10.jpg
+comments: true
 ---
 
 Almost everybody now uses *numpy* as it is extremely helpful for data analysis.

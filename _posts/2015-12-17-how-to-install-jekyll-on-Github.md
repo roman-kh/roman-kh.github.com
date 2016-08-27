@@ -6,6 +6,7 @@ tags: [Jekyll, Github Pages]
 date: 2015-12-17
 image:
   feature: abstract-7.jpg
+comments: true
 ---
 
 Today, *17 Dec 2015*, I have created this blog. It is powered by [Jekyll](https://jekyllrb.com/) with [Hpstr theme](https://github.com/mmistakes/hpstr-jekyll-theme)

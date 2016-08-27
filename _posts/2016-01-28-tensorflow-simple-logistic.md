@@ -6,6 +6,7 @@ tags: [python, tensorflow, logistic]
 date: 2016-01-28
 image:
   feature: abstract-7.jpg
+comments: true
 ---
 
 After a long struggle I managed to build from sources Tensorflow for GPU with CUDA capability=3.0.

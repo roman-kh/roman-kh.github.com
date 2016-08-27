@@ -19,7 +19,7 @@ owner:
   linkedin:        rhudo
   instagram:    
   flickr:         
-  tumblr:          roman-kh    
+  tumblr:          
 #  google_plus:     https://plus.google.com/105902469420566504130
 
 # Background image to be tiled on all pages
@@ -63,6 +63,8 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
+
+disqus_shortname: roman-kh-github-io
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
