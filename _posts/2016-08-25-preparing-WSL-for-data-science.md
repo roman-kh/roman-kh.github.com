@@ -89,9 +89,9 @@ The rest will be installed through `pip`, so I just list the packages:
 
 - cython
 - virtualenv
+- numpy
 - numexpr
 - blosc
-- numpy
 - scipy
 - tables
 - pandas
@@ -107,7 +107,7 @@ And now you can start jupyter to check it:
 {% highlight sh %}
 jupyter notebook --no-browser
 {% endhighlight %}
-Then connect to [http://localhost:8888](http://localhost:8888) (your settings might  differ), create or open a notebook and try to run some code. If the kernel does not crash immediately, then everything is fine.
+Connect to [http://localhost:8888](http://localhost:8888) (your settings might  differ), and create or open a notebook to run some code. If the kernel does not crash immediately, then everything is fine.
 
 Take into account that this is the baseline installation. You can now install some other great software like `xgboost`, `tensorflow`, `mxnet`, `neon`, etc. I don't need these in some projects, that is why they are not a part of the baseline.
 
