@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preparing Windows Linux Subsystem for data scientists
-description: "Your python programs are realy slow unless you use Numba. Part 2."
+description: "You have Linux in your Windows"
 tags: [WSL, linux]
 date: 2016-08-25
 image:
@@ -35,9 +35,9 @@ lxrun /install /y
 I usually start with installing compilators, git and some useful libraries.
 
 {% highlight sh %}
-sudo apt-get install build-essential gfortran
-sudo apt-get install zlib1g-dev liblapack-dev libatlas-base-dev libopenblas-dev libhdf5-dev libedit-dev
-sudo apt-get install git
+sudo apt-get install -y build-essential gfortran
+sudo apt-get install -y zlib1g-dev liblapack-dev libatlas-base-dev libopenblas-dev libhdf5-dev libedit-dev
+sudo apt-get install -y git
 {% endhighlight %}
 
 
@@ -52,8 +52,7 @@ sudo apt-get install libzmq3 libzmq3-dev
 As you might guess I also [use numba quite a lot](/tags/#numba), so I need LLVM. The problem is that LLVM is developing quite quickly and new releases often break API compatibility. Currently LLVM 3.7 is required for `numba`. But it is not available in the official repository for Ubuntu 14.04 which lies at the core of WSL. That is why we need some manual editing.
 
 {% highlight sh %}
-cd /etc/apt/sources.list
-sudo cat > llvm.list << EOF
+sudo cat > /etc/apt/sources.list.d/llvm.list << EOF
 deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty main
 deb-src http://apt.llvm.org/trusty/ llvm-toolchain-trusty main
 # 3.7
@@ -83,7 +82,7 @@ What we do here is pretty simple:
 First of all, we need `pip` and python development package with C headers and other stuff for building custom packages.
 
 {% highlight sh %}
-sudo apt-get install python-pip python-dev
+sudo apt-get install -y python-pip python-dev
 {% endhighlight %}
 The rest will be installed through `pip`, so I just list the packages:
 
@@ -92,14 +91,15 @@ The rest will be installed through `pip`, so I just list the packages:
 - numpy
 - numexpr
 - blosc
-- scipy
-- tables
-- pandas
-- sklearn
-- statsmodels
 - enum34
 - llvmlite
 - numba
+- scipy
+- tables
+- feather-format
+- pandas
+- sklearn
+- statsmodels
 - jupyter
 
 And now you can start jupyter to check it:
